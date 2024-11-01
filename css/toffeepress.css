@@ -1,0 +1,1748 @@
+/**
+ * ToffeePress: FlexGrid
+ * The responsive micro CSS grid system built using CSS Flex
+ * @author Dan Walker & James Durham
+ * https://toffeepress.twistphp.com
+ */
+body {
+  --grid-gutter:16px;
+  --grid-gutter-half:8px;
+}
+
+.tp-flex-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+.tp-flex-grid [class*=col-]:not(.col-100) {
+  margin: var(--grid-gutter-half) auto;
+}
+.tp-flex-grid [class*=col-]:not(.col-100).no-vertical-gutter {
+  margin: 0 auto;
+}
+.tp-flex-grid [class*=col-]:not(.col-100).no-margin {
+  margin: 0;
+}
+.tp-flex-grid .col-clear {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  -webkit-flex-grow: 1;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-flex-shrink: 1;
+  -moz-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  margin: 0 auto;
+}
+.tp-flex-grid .col-100-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+.tp-flex-grid .col-100, .tp-flex-grid .col-100-grid {
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+}
+.tp-flex-grid .col-90 {
+  -webkit-flex-basis: calc(90% - var(--grid-gutter));
+  -moz-flex-basis: calc(90% - var(--grid-gutter));
+  -ms-flex-basis: calc(90% - var(--grid-gutter));
+  flex-basis: calc(90% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-90.no-gutter {
+  -webkit-flex-basis: 90%;
+  -moz-flex-basis: 90%;
+  -ms-flex-basis: 90%;
+  flex-basis: 90%;
+}
+.tp-flex-grid .col-90.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-90.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-90-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(90% - var(--grid-gutter));
+  -moz-flex-basis: calc(90% - var(--grid-gutter));
+  -ms-flex-basis: calc(90% - var(--grid-gutter));
+  flex-basis: calc(90% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-90-grid.no-gutter {
+  -webkit-flex-basis: 90%;
+  -moz-flex-basis: 90%;
+  -ms-flex-basis: 90%;
+  flex-basis: 90%;
+}
+.tp-flex-grid .col-90-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-90-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-80 {
+  -webkit-flex-basis: calc(80% - var(--grid-gutter));
+  -moz-flex-basis: calc(80% - var(--grid-gutter));
+  -ms-flex-basis: calc(80% - var(--grid-gutter));
+  flex-basis: calc(80% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-80.no-gutter {
+  -webkit-flex-basis: 80%;
+  -moz-flex-basis: 80%;
+  -ms-flex-basis: 80%;
+  flex-basis: 80%;
+}
+.tp-flex-grid .col-80.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-80.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-80-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(80% - var(--grid-gutter));
+  -moz-flex-basis: calc(80% - var(--grid-gutter));
+  -ms-flex-basis: calc(80% - var(--grid-gutter));
+  flex-basis: calc(80% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-80-grid.no-gutter {
+  -webkit-flex-basis: 80%;
+  -moz-flex-basis: 80%;
+  -ms-flex-basis: 80%;
+  flex-basis: 80%;
+}
+.tp-flex-grid .col-80-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-80-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-75 {
+  -webkit-flex-basis: calc(75% - var(--grid-gutter));
+  -moz-flex-basis: calc(75% - var(--grid-gutter));
+  -ms-flex-basis: calc(75% - var(--grid-gutter));
+  flex-basis: calc(75% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-75.no-gutter {
+  -webkit-flex-basis: 75%;
+  -moz-flex-basis: 75%;
+  -ms-flex-basis: 75%;
+  flex-basis: 75%;
+}
+.tp-flex-grid .col-75.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-75.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-75-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(75% - var(--grid-gutter));
+  -moz-flex-basis: calc(75% - var(--grid-gutter));
+  -ms-flex-basis: calc(75% - var(--grid-gutter));
+  flex-basis: calc(75% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-75-grid.no-gutter {
+  -webkit-flex-basis: 75%;
+  -moz-flex-basis: 75%;
+  -ms-flex-basis: 75%;
+  flex-basis: 75%;
+}
+.tp-flex-grid .col-75-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-75-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-70 {
+  -webkit-flex-basis: calc(70% - var(--grid-gutter));
+  -moz-flex-basis: calc(70% - var(--grid-gutter));
+  -ms-flex-basis: calc(70% - var(--grid-gutter));
+  flex-basis: calc(70% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-70.no-gutter {
+  -webkit-flex-basis: 70%;
+  -moz-flex-basis: 70%;
+  -ms-flex-basis: 70%;
+  flex-basis: 70%;
+}
+.tp-flex-grid .col-70.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-70.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-70-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(70% - var(--grid-gutter));
+  -moz-flex-basis: calc(70% - var(--grid-gutter));
+  -ms-flex-basis: calc(70% - var(--grid-gutter));
+  flex-basis: calc(70% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-70-grid.no-gutter {
+  -webkit-flex-basis: 70%;
+  -moz-flex-basis: 70%;
+  -ms-flex-basis: 70%;
+  flex-basis: 70%;
+}
+.tp-flex-grid .col-70-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-70-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-66 {
+  -webkit-flex-basis: calc(66.6% - var(--grid-gutter));
+  -moz-flex-basis: calc(66.6% - var(--grid-gutter));
+  -ms-flex-basis: calc(66.6% - var(--grid-gutter));
+  flex-basis: calc(66.6% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-66.no-gutter {
+  -webkit-flex-basis: 66.6%;
+  -moz-flex-basis: 66.6%;
+  -ms-flex-basis: 66.6%;
+  flex-basis: 66.6%;
+}
+.tp-flex-grid .col-66.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-66.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-66-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(66.6% - var(--grid-gutter));
+  -moz-flex-basis: calc(66.6% - var(--grid-gutter));
+  -ms-flex-basis: calc(66.6% - var(--grid-gutter));
+  flex-basis: calc(66.6% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-66-grid.no-gutter {
+  -webkit-flex-basis: 66.6%;
+  -moz-flex-basis: 66.6%;
+  -ms-flex-basis: 66.6%;
+  flex-basis: 66.6%;
+}
+.tp-flex-grid .col-66-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-66-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-60 {
+  -webkit-flex-basis: calc(60% - var(--grid-gutter));
+  -moz-flex-basis: calc(60% - var(--grid-gutter));
+  -ms-flex-basis: calc(60% - var(--grid-gutter));
+  flex-basis: calc(60% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-60.no-gutter {
+  -webkit-flex-basis: 60%;
+  -moz-flex-basis: 60%;
+  -ms-flex-basis: 60%;
+  flex-basis: 60%;
+}
+.tp-flex-grid .col-60.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-60.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-60-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(60% - var(--grid-gutter));
+  -moz-flex-basis: calc(60% - var(--grid-gutter));
+  -ms-flex-basis: calc(60% - var(--grid-gutter));
+  flex-basis: calc(60% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-60-grid.no-gutter {
+  -webkit-flex-basis: 60%;
+  -moz-flex-basis: 60%;
+  -ms-flex-basis: 60%;
+  flex-basis: 60%;
+}
+.tp-flex-grid .col-60-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-60-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-50 {
+  -webkit-flex-basis: calc(50% - var(--grid-gutter));
+  -moz-flex-basis: calc(50% - var(--grid-gutter));
+  -ms-flex-basis: calc(50% - var(--grid-gutter));
+  flex-basis: calc(50% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-50.no-gutter {
+  -webkit-flex-basis: 50%;
+  -moz-flex-basis: 50%;
+  -ms-flex-basis: 50%;
+  flex-basis: 50%;
+}
+.tp-flex-grid .col-50.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-50.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-50-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(50% - var(--grid-gutter));
+  -moz-flex-basis: calc(50% - var(--grid-gutter));
+  -ms-flex-basis: calc(50% - var(--grid-gutter));
+  flex-basis: calc(50% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-50-grid.no-gutter {
+  -webkit-flex-basis: 50%;
+  -moz-flex-basis: 50%;
+  -ms-flex-basis: 50%;
+  flex-basis: 50%;
+}
+.tp-flex-grid .col-50-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-50-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-40 {
+  -webkit-flex-basis: calc(40% - var(--grid-gutter));
+  -moz-flex-basis: calc(40% - var(--grid-gutter));
+  -ms-flex-basis: calc(40% - var(--grid-gutter));
+  flex-basis: calc(40% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-40.no-gutter {
+  -webkit-flex-basis: 40%;
+  -moz-flex-basis: 40%;
+  -ms-flex-basis: 40%;
+  flex-basis: 40%;
+}
+.tp-flex-grid .col-40.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-40.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-40-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(40% - var(--grid-gutter));
+  -moz-flex-basis: calc(40% - var(--grid-gutter));
+  -ms-flex-basis: calc(40% - var(--grid-gutter));
+  flex-basis: calc(40% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-40-grid.no-gutter {
+  -webkit-flex-basis: 40%;
+  -moz-flex-basis: 40%;
+  -ms-flex-basis: 40%;
+  flex-basis: 40%;
+}
+.tp-flex-grid .col-40-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-40-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-33 {
+  -webkit-flex-basis: calc(33.3% - var(--grid-gutter));
+  -moz-flex-basis: calc(33.3% - var(--grid-gutter));
+  -ms-flex-basis: calc(33.3% - var(--grid-gutter));
+  flex-basis: calc(33.3% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-33.no-gutter {
+  -webkit-flex-basis: 33.3%;
+  -moz-flex-basis: 33.3%;
+  -ms-flex-basis: 33.3%;
+  flex-basis: 33.3%;
+}
+.tp-flex-grid .col-33.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-33.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-33-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(33.3% - var(--grid-gutter));
+  -moz-flex-basis: calc(33.3% - var(--grid-gutter));
+  -ms-flex-basis: calc(33.3% - var(--grid-gutter));
+  flex-basis: calc(33.3% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-33-grid.no-gutter {
+  -webkit-flex-basis: 33.3%;
+  -moz-flex-basis: 33.3%;
+  -ms-flex-basis: 33.3%;
+  flex-basis: 33.3%;
+}
+.tp-flex-grid .col-33-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-33-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-30 {
+  -webkit-flex-basis: calc(30% - var(--grid-gutter));
+  -moz-flex-basis: calc(30% - var(--grid-gutter));
+  -ms-flex-basis: calc(30% - var(--grid-gutter));
+  flex-basis: calc(30% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-30.no-gutter {
+  -webkit-flex-basis: 30%;
+  -moz-flex-basis: 30%;
+  -ms-flex-basis: 30%;
+  flex-basis: 30%;
+}
+.tp-flex-grid .col-30.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-30.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-30-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(30% - var(--grid-gutter));
+  -moz-flex-basis: calc(30% - var(--grid-gutter));
+  -ms-flex-basis: calc(30% - var(--grid-gutter));
+  flex-basis: calc(30% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-30-grid.no-gutter {
+  -webkit-flex-basis: 30%;
+  -moz-flex-basis: 30%;
+  -ms-flex-basis: 30%;
+  flex-basis: 30%;
+}
+.tp-flex-grid .col-30-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-30-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-25 {
+  -webkit-flex-basis: calc(25% - var(--grid-gutter));
+  -moz-flex-basis: calc(25% - var(--grid-gutter));
+  -ms-flex-basis: calc(25% - var(--grid-gutter));
+  flex-basis: calc(25% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-25.no-gutter {
+  -webkit-flex-basis: 25%;
+  -moz-flex-basis: 25%;
+  -ms-flex-basis: 25%;
+  flex-basis: 25%;
+}
+.tp-flex-grid .col-25.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-25.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-25-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(25% - var(--grid-gutter));
+  -moz-flex-basis: calc(25% - var(--grid-gutter));
+  -ms-flex-basis: calc(25% - var(--grid-gutter));
+  flex-basis: calc(25% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-25-grid.no-gutter {
+  -webkit-flex-basis: 25%;
+  -moz-flex-basis: 25%;
+  -ms-flex-basis: 25%;
+  flex-basis: 25%;
+}
+.tp-flex-grid .col-25-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-25-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-20 {
+  -webkit-flex-basis: calc(20% - var(--grid-gutter));
+  -moz-flex-basis: calc(20% - var(--grid-gutter));
+  -ms-flex-basis: calc(20% - var(--grid-gutter));
+  flex-basis: calc(20% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-20.no-gutter {
+  -webkit-flex-basis: 20%;
+  -moz-flex-basis: 20%;
+  -ms-flex-basis: 20%;
+  flex-basis: 20%;
+}
+.tp-flex-grid .col-20.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-20.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-20-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(20% - var(--grid-gutter));
+  -moz-flex-basis: calc(20% - var(--grid-gutter));
+  -ms-flex-basis: calc(20% - var(--grid-gutter));
+  flex-basis: calc(20% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-20-grid.no-gutter {
+  -webkit-flex-basis: 20%;
+  -moz-flex-basis: 20%;
+  -ms-flex-basis: 20%;
+  flex-basis: 20%;
+}
+.tp-flex-grid .col-20-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-20-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-16 {
+  -webkit-flex-basis: calc(16.6% - var(--grid-gutter));
+  -moz-flex-basis: calc(16.6% - var(--grid-gutter));
+  -ms-flex-basis: calc(16.6% - var(--grid-gutter));
+  flex-basis: calc(16.6% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-16.no-gutter {
+  -webkit-flex-basis: 16.6%;
+  -moz-flex-basis: 16.6%;
+  -ms-flex-basis: 16.6%;
+  flex-basis: 16.6%;
+}
+.tp-flex-grid .col-16.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-16.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-16-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(16.6% - var(--grid-gutter));
+  -moz-flex-basis: calc(16.6% - var(--grid-gutter));
+  -ms-flex-basis: calc(16.6% - var(--grid-gutter));
+  flex-basis: calc(16.6% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-16-grid.no-gutter {
+  -webkit-flex-basis: 16.6%;
+  -moz-flex-basis: 16.6%;
+  -ms-flex-basis: 16.6%;
+  flex-basis: 16.6%;
+}
+.tp-flex-grid .col-16-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-16-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-10 {
+  -webkit-flex-basis: calc(10% - var(--grid-gutter));
+  -moz-flex-basis: calc(10% - var(--grid-gutter));
+  -ms-flex-basis: calc(10% - var(--grid-gutter));
+  flex-basis: calc(10% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-10.no-gutter {
+  -webkit-flex-basis: 10%;
+  -moz-flex-basis: 10%;
+  -ms-flex-basis: 10%;
+  flex-basis: 10%;
+}
+.tp-flex-grid .col-10.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-10.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+.tp-flex-grid .col-10-grid {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-content: space-between;
+  -moz-align-content: space-between;
+  -ms-align-content: space-between;
+  align-content: space-between;
+  -webkit-align-items: flex-start;
+  -moz-align-items: flex-start;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-basis: calc(10% - var(--grid-gutter));
+  -moz-flex-basis: calc(10% - var(--grid-gutter));
+  -ms-flex-basis: calc(10% - var(--grid-gutter));
+  flex-basis: calc(10% - var(--grid-gutter));
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch;
+}
+.tp-flex-grid .col-10-grid.no-gutter {
+  -webkit-flex-basis: 10%;
+  -moz-flex-basis: 10%;
+  -ms-flex-basis: 10%;
+  flex-basis: 10%;
+}
+.tp-flex-grid .col-10-grid.no-stretch {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center;
+}
+.tp-flex-grid .col-10-grid.no-stretch-top {
+  -webkit-align-self: auto;
+  -moz-align-self: auto;
+  -ms-align-self: auto;
+  align-self: auto;
+}
+@media screen and (max-width: 1024px) {
+  .tp-flex-grid .col-25 {
+    -webkit-flex-basis: calc(50% - var(--grid-gutter));
+    -moz-flex-basis: calc(50% - var(--grid-gutter));
+    -ms-flex-basis: calc(50% - var(--grid-gutter));
+    flex-basis: calc(50% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-25.no-gutter {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+  }
+  .tp-flex-grid .col-25.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-25.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid .col-25-grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    -ms-align-content: space-between;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-basis: calc(50% - var(--grid-gutter));
+    -moz-flex-basis: calc(50% - var(--grid-gutter));
+    -ms-flex-basis: calc(50% - var(--grid-gutter));
+    flex-basis: calc(50% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-25-grid.no-gutter {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+  }
+  .tp-flex-grid .col-25-grid.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-25-grid.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid .col-20 {
+    -webkit-flex-basis: calc(50% - var(--grid-gutter));
+    -moz-flex-basis: calc(50% - var(--grid-gutter));
+    -ms-flex-basis: calc(50% - var(--grid-gutter));
+    flex-basis: calc(50% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-20.no-gutter {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+  }
+  .tp-flex-grid .col-20.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-20.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid .col-20-grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    -ms-align-content: space-between;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-basis: calc(50% - var(--grid-gutter));
+    -moz-flex-basis: calc(50% - var(--grid-gutter));
+    -ms-flex-basis: calc(50% - var(--grid-gutter));
+    flex-basis: calc(50% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-20-grid.no-gutter {
+    -webkit-flex-basis: 50%;
+    -moz-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
+  }
+  .tp-flex-grid .col-20-grid.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-20-grid.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid .col-16 {
+    -webkit-flex-basis: calc(33.3% - var(--grid-gutter));
+    -moz-flex-basis: calc(33.3% - var(--grid-gutter));
+    -ms-flex-basis: calc(33.3% - var(--grid-gutter));
+    flex-basis: calc(33.3% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-16.no-gutter {
+    -webkit-flex-basis: 33.3%;
+    -moz-flex-basis: 33.3%;
+    -ms-flex-basis: 33.3%;
+    flex-basis: 33.3%;
+  }
+  .tp-flex-grid .col-16.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-16.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid .col-16-grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    -ms-align-content: space-between;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-basis: calc(33.3% - var(--grid-gutter));
+    -moz-flex-basis: calc(33.3% - var(--grid-gutter));
+    -ms-flex-basis: calc(33.3% - var(--grid-gutter));
+    flex-basis: calc(33.3% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid .col-16-grid.no-gutter {
+    -webkit-flex-basis: 33.3%;
+    -moz-flex-basis: 33.3%;
+    -ms-flex-basis: 33.3%;
+    flex-basis: 33.3%;
+  }
+  .tp-flex-grid .col-16-grid.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid .col-16-grid.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+}
+@media screen and (max-width: 896px) {
+  .tp-flex-grid [class*=col-] {
+    -webkit-flex-basis: calc(100% - var(--grid-gutter));
+    -moz-flex-basis: calc(100% - var(--grid-gutter));
+    -ms-flex-basis: calc(100% - var(--grid-gutter));
+    flex-basis: calc(100% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid [class*=col-].no-gutter {
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+  }
+  .tp-flex-grid [class*=col-].no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid [class*=col-].no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+  .tp-flex-grid [class*=col-] -grid {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-content: space-between;
+    -moz-align-content: space-between;
+    -ms-align-content: space-between;
+    align-content: space-between;
+    -webkit-align-items: flex-start;
+    -moz-align-items: flex-start;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-flex-basis: calc(100% - var(--grid-gutter));
+    -moz-flex-basis: calc(100% - var(--grid-gutter));
+    -ms-flex-basis: calc(100% - var(--grid-gutter));
+    flex-basis: calc(100% - var(--grid-gutter));
+    -webkit-align-self: stretch;
+    -moz-align-self: stretch;
+    -ms-align-self: stretch;
+    align-self: stretch;
+  }
+  .tp-flex-grid [class*=col-] -grid.no-gutter {
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
+  }
+  .tp-flex-grid [class*=col-] -grid.no-stretch {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center;
+  }
+  .tp-flex-grid [class*=col-] -grid.no-stretch-top {
+    -webkit-align-self: auto;
+    -moz-align-self: auto;
+    -ms-align-self: auto;
+    align-self: auto;
+  }
+}
+
+body[class*=toffeepress] #wpcontent {
+  padding-left: 0;
+}
+
+.toffeepressWindow {
+  position: relative;
+  /**
+   * 1. The `reverse` animation direction plays the animation backwards
+   *    which makes it start at the stroke offset 100 which means displaying
+   *    no stroke at all and animating it to the value defined in the SVG
+   *    via the inline `stroke-dashoffset` attribute.
+   * 2. Rotate by -90 degree to make the starting point of the
+   *    stroke the top of the circle.
+   * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+   *    and Edge, use the transform attribute directly on the SVG element as a
+   * .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+   */
+  /**
+   * 1. Rotate by -90 degree to make the starting point of the
+   *    stroke the top of the circle.
+   * 2. Scaling mirrors the circle to make the stroke move right
+   *    to mark a positive chart value.
+   * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+   *    and Edge, use the transform attribute directly on the SVG element as a
+   * .  workaround (https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart/#part-4-internet-explorer-strikes-back).
+   */
+}
+.toffeepressWindow h1 img {
+  display: inline-block;
+  width: 64px;
+  vertical-align: text-top;
+}
+.toffeepressWindow .redText {
+  color: #a04b4b;
+}
+.toffeepressWindow .poweredBy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+}
+.toffeepressWindow .poweredBy img {
+  display: inline-block;
+  width: 32px;
+  margin-left: 10px;
+  vertical-align: text-top;
+}
+.toffeepressWindow .tpHeader {
+  position: relative;
+  display: block;
+  margin: 0 !important;
+  background-image: linear-gradient(#FFFFFF, #00acc1);
+  border-bottom: 2px solid #007181;
+  box-shadow: 0 4px 2px -2px #CCCCCC;
+  font-family: "Open Sans", sans-serif;
+  color: #919191;
+  font-size: 16px;
+  line-height: 20px;
+  min-height: 106px;
+}
+.toffeepressWindow .tpHeader .logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+.toffeepressWindow .tpHeader .logo img {
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+.toffeepressWindow .tpBody {
+  padding: 10px 25px;
+}
+.toffeepressWindow .tpSettingsBox {
+  border: 1px solid #CCC;
+  background-color: #FFF;
+}
+.toffeepressWindow .tpSettingsBox .title {
+  display: block;
+  width: 100%;
+  background-color: #CCC;
+  border-bottom: 1px solid #CCC;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.toffeepressWindow .tpSettingsBox .title h1, .toffeepressWindow .tpSettingsBox .title h2, .toffeepressWindow .tpSettingsBox .title h3, .toffeepressWindow .tpSettingsBox .title h4 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.toffeepressWindow .tpSettingsBox .inner {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.toffeepressWindow .progressBox {
+  background-color: #EBEBEB;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  padding: 6px;
+}
+.toffeepressWindow .progressBox div {
+  font-weight: bold;
+}
+.toffeepressWindow .progressBox div span {
+  font-weight: normal;
+}
+.toffeepressWindow .log {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow: auto;
+}
+.toffeepressWindow .log .error {
+  display: block;
+  width: 100%;
+  color: #FF0000;
+}
+.toffeepressWindow .log .OK {
+  display: block;
+  width: 100%;
+  color: #3f9d50;
+}
+.toffeepressWindow table tbody tr.needsCompression td.stats {
+  color: #80121C;
+}
+.toffeepressWindow table tbody tr.needsCompression td.tools a {
+  display: inline-block;
+}
+.toffeepressWindow table tbody tr.needsCompression td.tools a + a {
+  margin-left: 10px;
+}
+.toffeepressWindow .stats {
+  text-align: right;
+}
+.toffeepressWindow .stats .statsBox {
+  vertical-align: top;
+  display: inline-block;
+  margin: 10px 10px 10px 20px;
+  background-color: #FFF;
+  border: 1px solid #9D9D9D;
+  padding: 10px;
+  text-align: left;
+  min-width: 200px;
+}
+.toffeepressWindow .stats .statsBox h3 {
+  margin-top: 0;
+  padding-top: 0;
+}
+.toffeepressWindow .tpButton {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid #444444;
+  color: #444444;
+  text-decoration: none;
+  margin: 10px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+.toffeepressWindow .tpButton:hover {
+  background-color: #444444;
+  color: #FFFFFF;
+}
+.toffeepressWindow .tpButton.red {
+  border: 2px solid #65262A;
+  color: #65262A;
+}
+.toffeepressWindow .tpButton.red:hover {
+  background-color: #65262A;
+  color: #FFFFFF;
+}
+.toffeepressWindow .tpButton.blue {
+  border: 2px solid #00acc1;
+  color: #00acc1;
+}
+.toffeepressWindow .tpButton.blue:hover {
+  background-color: #00acc1;
+  color: #FFFFFF;
+}
+.toffeepressWindow .tpButton.white {
+  border: 2px solid #FFF;
+  color: #FFF;
+}
+.toffeepressWindow .tpButton.white:hover {
+  background-color: #FFF;
+  color: #00acc1;
+}
+.toffeepressWindow .tpLiveStats {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.toffeepressWindow .tpLiveStats .tpProgress {
+  text-align: right;
+}
+.toffeepressWindow .tpLiveStats .tpStats {
+  text-align: left;
+}
+.toffeepressWindow .tpLiveStats .tpStats .keyInfo {
+  font-size: 28px;
+  line-height: 48px;
+  color: #00acc1;
+}
+.toffeepressWindow .tpLiveStats .tpStats .keyInfo span {
+  font-size: 34px;
+  line-height: 34px;
+}
+.toffeepressWindow .tpLiveStats .tpStats .details {
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 2px solid #FFF;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  width: 250px;
+}
+.toffeepressWindow .tpLiveStats .tpStats .log {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow: auto;
+}
+.toffeepressWindow .tpLiveStats .tpStats .log .error {
+  display: block;
+  width: 100%;
+  color: #FF0000;
+}
+.toffeepressWindow .tpLiveStats .tpStats .log .OK {
+  display: block;
+  width: 100%;
+  color: #3f9d50;
+}
+.toffeepressWindow .circle-chart {
+  margin: 10px;
+}
+.toffeepressWindow .circle-chart__circle {
+  animation: circle-chart-fill 2s reverse;
+  /* 1 */
+  transform: rotate(-90deg);
+  /* 2, 3 */
+  transform-origin: center;
+  /* 4 */
+}
+.toffeepressWindow .circle-chart__circle--negative {
+  transform: rotate(-90deg) scale(1, -1);
+  /* 1, 2, 3 */
+}
+.toffeepressWindow .circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
+}
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=toffeepress.css.map */
